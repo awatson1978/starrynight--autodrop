@@ -12,7 +12,7 @@ Package.describe({
 
 Package.onUse(function (api) {
   api.versionsFrom('1.1.0.2');
-  api.use('percolate:synced-cron');
+  api.use('percolate:synced-cron@1.2.1');
   api.addFiles('autodrop.js');
 });
 
