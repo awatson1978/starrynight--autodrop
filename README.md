@@ -2,7 +2,7 @@
 
 Reset the database on a regular interval.
 
- **Security Warning:  Only use this package for demo apps which can have their database regularly reset. **
+ **Security Warning: Only use this package for demo apps which can have their database regularly reset.**
 
 ======================================
 #### Installation  
