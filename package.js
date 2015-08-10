@@ -1,6 +1,6 @@
 Package.describe({
   name: 'starrynight:autodrop',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'Reset the database on a regular interval.',
   // URL to the Git repository containing the source code for this package.
@@ -14,6 +14,7 @@ Package.onUse(function (api) {
   api.versionsFrom('1.1.0.2');
   api.use('percolate:synced-cron@1.2.1');
   api.addFiles('autodrop.js');
+  api.imply('percolate:synced-cron');
 });
 
 Package.onTest(function (api) {

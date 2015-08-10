@@ -17,16 +17,18 @@ meteor add starrynight:autodrop
 Parser takes [later.js](http://bunkat.github.io/later/) syntax.  ``dropDatabase`` functionality is added within this package.
 
 ````js
-SyncedCron.add({
-  name: 'Reset the database on a regular interval.',
-  schedule: function(parser) {
-    // parser is a later.parse object
-    return parser.text('every 1 days');
-  },
-  job: function() {
-    Meteor.call('dropDatabases');
-  }
-});
+if(Meteor.isServer){
+  SyncedCron.add({
+    name: 'Reset the database on a regular interval.',
+    schedule: function(parser) {
+      // parser is a later.parse object
+      return parser.text('every 1 days');
+    },
+    job: function() {
+      Meteor.call('dropDatabases');
+    }
+  });
+}
 ````
 
 
